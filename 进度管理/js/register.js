@@ -14,15 +14,16 @@ for (let i = 0; i < item.length; i++) {
   });
 }
 // 为输入框添加防抖
-const inp = document.querySelectorAll(".t");
-function gett() {
-  console.log(inp[0].value);
+const inp = document.querySelectorAll('input');
+function gett(num,content) {
+  return function(){
+    console.log(num,content.value);
+  }
 }
 function debounce(func, delay) {
   let timer;
   let context = this;
   let args = arguments;
-
   return function () {
     if (timer) {
       clearTimeout(timer);
@@ -32,7 +33,7 @@ function debounce(func, delay) {
     }, delay);
   };
 }
-inp[0].addEventListener("input", debounce(gett, 2000));
-// for (let i = 0; i < inp.length; i++) {
-//   inp[0].addEventListener("input", debounce(gett, 9000));
-// }
+let fn = (num,content)=>debounce(gett(num,content),1000)
+inp.forEach((item,index)=>{
+  item.addEventListener("input", fn(index,item));
+})
