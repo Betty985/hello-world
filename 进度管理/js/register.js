@@ -14,11 +14,11 @@ for (let i = 0; i < item.length; i++) {
   });
 }
 // 为输入框添加防抖
-const inp = document.querySelectorAll('input');
-function gett(num,content) {
-  return function(){
-    console.log(num,content.value);
-  }
+const inp = document.querySelectorAll("input");
+function gett(num, content) {
+  return function () {
+    console.log(num, content.value);
+  };
 }
 function debounce(func, delay) {
   let timer;
@@ -33,7 +33,42 @@ function debounce(func, delay) {
     }, delay);
   };
 }
-let fn = (num,content)=>debounce(gett(num,content),1000)
-inp.forEach((item,index)=>{
-  item.addEventListener("input", fn(index,item));
-})
+let fn = (num, content) => debounce(gett(num, content), 1000);
+inp.forEach((item, index) => {
+  item.addEventListener("input", fn(index, item));
+});
+// ===============================================================
+// 鼠标跟随效果
+let img = document.querySelector(".img");
+// 定义图片旋转角度
+let deg = 0;
+let imgx = 0;
+let imgy = 0;
+let imgl = 0;
+let imgt = 0;
+let y = 0;
+let index = 0;
+window.addEventListener("mousemove", function (xyz) {
+  // console.log(xyz);
+  imgx = xyz.x - img.offsetLeft - img.clientWidth / 2;
+  imgy = xyz.y - img.offsetTop - img.clientHeight / 2;
+  deg = (360 * Math.atan(imgy / imgx)) / (2 * Math.PI);
+  index = 0;
+  let x = Event.clientX;
+  if (img.offsetLeft < x) {
+    y -= 180;
+  } else {
+    y = 0;
+  }
+  setInterval(() => {
+    img.style.tranform = "rotateX(" + deg + "deg) rotateY(" + y + "deg)";
+    // console.log(img.style.tranform);
+    index++;
+    if (index < 50) {
+      imgl += imgx / 50;
+      imgt += imgy / 50;
+    }
+    img.style.left = imgl + "px";
+    img.style.top = imgt + "px";
+  }, 10);
+});
