@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "chatttingRoom", ".", "{27562016-13D6-4179-8308-88029FD1B9D6}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_57589"
+		Debug.AspNetCompiler.PhysicalPath = "..\chatttingRoom\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57589\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_57589"
+		Release.AspNetCompiler.PhysicalPath = "..\chatttingRoom\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57589\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "57589"
+		SlnRelativePath = "..\chatttingRoom\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27562016-13D6-4179-8308-88029FD1B9D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27562016-13D6-4179-8308-88029FD1B9D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7CD2A09-5516-456B-8BEC-BB8988BE5E20}
+	EndGlobalSection
+EndGlobal
